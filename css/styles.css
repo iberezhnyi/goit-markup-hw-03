@@ -1,0 +1,227 @@
+/* Основной цвет бекграунда - #E5E5E5; */
+/* Дополнительный цвет бекграунда - #F5F4FA; */
+/* Цвет бекграунда героя, футера - #2F303A; */
+
+/* Дополнительный цвет бг, текста - #FFFFFF; */
+/* Цвет основного текста - #757575; */
+/* Цвет текста тайтлов - #212121; */
+/* Акцент цвет текста - #2196F3; */
+/* Цвет текста в футере № тел., e-mail - rgba(255, 255, 255, 0.6); */
+/* Лого студио текст цвет - #000000; */
+/* Цвет ховера кнопки - #188CE8; */
+
+:root {
+    --primary-white-color: #FFFFFF;
+    --section-bg-color: #E5E5E5;
+    --secondary-bg-color: #F5F4FA;
+    --hero-footer-bg-color: #2F303A;
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --footer-text-color: rgba(255, 255, 255, 0.6);
+    --logo-studio-text-color: #000000;
+    --button-hover-color: #188CE8;
+}
+
+.page {
+    background-color: var(--primary-white-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.list {
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Header, footer */
+.header {
+    background-color: var(--primary-white-color);
+}
+
+.logo {
+    color: var(--accent-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+}
+
+.header .logo-studio {
+    color: var(--logo-studio-text-color);
+}
+
+.header .contacts {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+/* Footer (color при ховере перезапись) */
+.footer .contacts {
+    color: var(--footer-text-color);
+    text-decoration: none;
+}
+
+.footer .logo-studio,
+.footer .office {
+    color: var(--primary-white-color);
+}
+
+.portfolio-link,
+.office {
+    text-decoration: none;
+}
+
+.address {
+    font-style: normal;
+}
+
+/* Site-nav */
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts:hover,
+.contacts:focus,
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.link {
+    color: var(--title-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+/* section */
+
+/* 
+
+.benefits-section,
+.working-section,
+.portfolio-section {
+    background-color: var(--section-bg-color);
+}
+
+*/
+
+.section-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* Hero section */
+.hero-title {
+    color: var(--primary-white-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero,
+.footer {
+    background-color: var(--hero-footer-bg-color);
+}
+
+/* Button */
+.button {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.88;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-hover-color)
+}
+
+/* Benefits */
+.title {
+    color: var(--title-text-color);
+}
+
+.benefits .title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+/* Team */
+.team-section {
+    background-color: var(--secondary-bg-color);
+}
+
+.team-list .title {
+    font-weight: 500;
+}
+
+.team-list .title,
+.team-list .profession {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+                                    /* Portfolio */
+
+.portfolio-list .title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-list .text {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.portfolio-buttons {
+    background-color: var(--secondary-bg-color);
+    color: var(--title-text-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    cursor: pointer;
+}
+
+.portfolio-buttons:hover,
+.portfolio-buttons:focus,
+.active-button {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+}
+
+.employee {
+    background-color: var(--primary-white-color);
+}
