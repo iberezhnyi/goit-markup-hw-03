@@ -1,14 +1,18 @@
-/* Основной цвет бекграунда - #E5E5E5; */
-/* Дополнительный цвет бекграунда - #F5F4FA; */
-/* Цвет бекграунда героя, футера - #2F303A; */
+/* Основной цвет бекграунда - #e5e5e5; */
+/* Дополнительный цвет бекграунда - #f5f4fa; */
+/* Цвет бекграунда героя, футера - #2f303a; */
 
-/* Дополнительный цвет бг, текста - #FFFFFF; */
+/* Дополнительный цвет бг, текста - #ffffff; */
 /* Цвет основного текста - #757575; */
 /* Цвет текста тайтлов - #212121; */
-/* Акцент цвет текста - #2196F3; */
+/* Акцент цвет текста - #2196f3; */
 /* Цвет текста в футере № тел., e-mail - rgba(255, 255, 255, 0.6); */
 /* Лого студио текст цвет - #000000; */
-/* Цвет ховера кнопки - #188CE8; */
+/* Цвет ховера кнопки - #188ce8; */
+/* Цвет border карточек портфолио -#eeeeee; */
+/* Цвет border хедера - #ececec; */
+
+/* Обводка - outline: 2px solid tomato; */
 
 :root {
   --primary-white-color: #ffffff;
@@ -21,6 +25,8 @@
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --logo-studio-text-color: #000000;
   --button-hover-color: #188ce8;
+  --border-header-color: #ececec;
+  --border-portfolio-card: #eeeeee;
 }
 
 .page {
@@ -38,7 +44,6 @@
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
-  outline: 2px solid tomato;
 }
 
 .list {
@@ -64,6 +69,7 @@
 /* Header, footer */
 .header {
   background-color: var(--primary-white-color);
+  border: 1px solid var(--border-header-color);
 }
 
 .logo {
@@ -104,6 +110,11 @@
 
 .address {
   font-style: normal;
+  margin-top: 20px;
+}
+
+.address .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer .container {
@@ -189,7 +200,6 @@
 .hero {
   background-color: var(--hero-footer-bg-color);
   text-align: center;
-  outline: 2px solid tomato;
 }
 
 /* Button */
@@ -201,10 +211,11 @@
   color: var(--primary-white-color);
   font-family: inherit;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 16px;
   line-height: 1.88;
   text-align: center;
   cursor: pointer;
+  border: 0;
 }
 
 .button:hover,
@@ -213,6 +224,18 @@
 }
 
 /* Benefits */
+.benefits p {
+  margin: 0;
+}
+
+.benefits .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.benefits {
+  display: flex;
+}
+
 .benefits-section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -235,6 +258,17 @@
   padding-bottom: 94px;
 }
 
+.workflow {
+  display: flex;
+}
+
+.workflow .item:not(:last-child) {
+  margin-right: 30px;
+}
+.workflow img {
+  display: block;
+}
+
 /* Team */
 .team-section {
   background-color: var(--secondary-bg-color);
@@ -242,8 +276,20 @@
   padding-bottom: 94px;
 }
 
+.employee {
+  background-color: var(--primary-white-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.employee:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-list .title {
   font-weight: 500;
+  margin-top: 30px;
 }
 
 .team-list .title,
@@ -253,18 +299,49 @@
   text-align: center;
 }
 
+.team-list p {
+  margin: 0 0 30px 0;
+}
+
+.team-list img {
+  display: block;
+}
+
+.team-list {
+  display: flex;
+}
+
 /* Portfolio */
+.portfolio-section {
+  padding-top: 100px;
+  padding-bottom: 94px;
+}
+
+.portfolio-nav {
+  margin-bottom: 56px;
+  justify-content: center;
+}
 
 .portfolio-list .title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin: 0 0 4px;
 }
 
 .portfolio-list .text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
+  margin: 0;
+}
+
+.portfolio-list img {
+  display: block;
+}
+
+.portfolio-nav > .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-buttons {
@@ -278,6 +355,26 @@
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
+  border: 0;
+}
+
+.portfolio-list > .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-list > .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.portfolio-list > .item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-section .portfolio-nav,
+.portfolio-section .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .portfolio-buttons:hover,
@@ -287,6 +384,14 @@
   color: var(--primary-white-color);
 }
 
-.employee {
-  background-color: var(--primary-white-color);
+/* .portfolio-section .portfolio-list {
+  margin-left: -4px;
+  margin-right: -3px;
+} */
+
+.portfolio-border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-portfolio-card);
+  border-bottom: 1px solid var(--border-portfolio-card);
+  border-left: 1px solid var(--border-portfolio-card);
 }
